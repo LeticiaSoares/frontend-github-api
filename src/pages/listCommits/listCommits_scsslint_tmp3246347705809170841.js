@@ -31,7 +31,7 @@ class ListCommits extends React.Component {
                 <Input  type='text ' onChange={this.onFilterCommits} value={this.state.filter} required />
                 <Table columns={['Autor','Data','Mensagem']}>
                     {commits && commits.map((item) => (
-                                <tr key={item.commit.tree.sha}>
+                                <tr key={item.author.id}>
                                     <td>{item.commit.author.name}</td>
                                     <td>{item.commit.author.date}</td>
                                     <td>{item.commit.message}</td>

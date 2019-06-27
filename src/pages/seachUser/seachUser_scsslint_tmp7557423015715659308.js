@@ -15,11 +15,10 @@ class SearchUser extends Component{
         this.inputUser = React.createRef()
     }
     onGetRepos = () =>{
-        if(this.state.user){
-            this.props.onGetRepos(this.state.user)
-        }
+        if(this.state.user)
+        this.props.onGetRepos(this.state.user)
     }
-
+    
     setUser = (e) => {
         this.setState({user :  e.target.value, disabled : this.inputUser.current.hasError()})
     }

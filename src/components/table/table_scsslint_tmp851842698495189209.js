@@ -6,7 +6,7 @@ const Table = styled(({className,columns, children}) => (
         <thead>
             <tr className='table__titles'>
                 {columns && columns.map((item)=>(
-                     <th key={item}>{item}</th>
+                     <th key={}>{item}</th>
                 ))}
             </tr>
         </thead>

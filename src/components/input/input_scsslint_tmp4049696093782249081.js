@@ -9,6 +9,9 @@ class Input extends Component {
         }
         this.value = ''
     }
+    getValue = () => {
+        return this.value
+    }
     hasError = () => {
         if(this.state.message === null || this.state.message !== ''){
             return true
@@ -28,7 +31,11 @@ class Input extends Component {
         if(this.props.required && this.value.trim() === '') {
             message = 'Campo Obrigatório'
         }
-        this.setState({ message : message  },this.props.onChange(e))
+        if(message){
+            this.setState({ message : message  })
+        }else{
+            this.props.onChange(e)
+        }
     }
     render() {
         const { className,value } = this.props

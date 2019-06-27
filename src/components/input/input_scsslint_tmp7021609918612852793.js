@@ -9,26 +9,21 @@ class Input extends Component {
         }
         this.value = ''
     }
-    hasError = () => {
-        if(this.state.message === null || this.state.message !== ''){
-            return true
-        }else{
-            return false
-        }
-    }
     handleKeyPress = (e) =>{
         if(e.key === 'Enter'){
+            console.log('handleKeyPress')
             this.handleChange(e)
-            this.props.onKeyPress(e)
         }
     }
     handleChange = (e) => {
+        console.log('handleChange',e.target.value)
         this.value = e.target.value
+        const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         let message = ''
-        if(this.props.required && this.value.trim() === '') {
+        if(this.props.required && this.value.trim() === ''){
             message = 'Campo Obrigatório'
-        }
         this.setState({ message : message  },this.props.onChange(e))
+
     }
     render() {
         const { className,value } = this.props

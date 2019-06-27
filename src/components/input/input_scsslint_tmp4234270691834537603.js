@@ -9,13 +9,6 @@ class Input extends Component {
         }
         this.value = ''
     }
-    hasError = () => {
-        if(this.state.message === null || this.state.message !== ''){
-            return true
-        }else{
-            return false
-        }
-    }
     handleKeyPress = (e) =>{
         if(e.key === 'Enter'){
             this.handleChange(e)

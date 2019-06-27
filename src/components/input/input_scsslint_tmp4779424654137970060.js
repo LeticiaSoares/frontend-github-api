@@ -9,13 +9,6 @@ class Input extends Component {
         }
         this.value = ''
     }
-    hasError = () => {
-        if(this.state.message === null || this.state.message !== ''){
-            return true
-        }else{
-            return false
-        }
-    }
     handleKeyPress = (e) =>{
         if(e.key === 'Enter'){
             this.handleChange(e)
@@ -28,7 +21,12 @@ class Input extends Component {
         if(this.props.required && this.value.trim() === '') {
             message = 'Campo Obrigatório'
         }
-        this.setState({ message : message  },this.props.onChange(e))
+        if(message){
+            this.setState({ message : message  })
+        }else{
+            
+        }
+        this.props.onChange(e))
     }
     render() {
         const { className,value } = this.props

@@ -9,20 +9,15 @@ class Input extends Component {
         }
         this.value = ''
     }
-    hasError = () => {
-        if(this.state.message === null || this.state.message !== ''){
-            return true
-        }else{
-            return false
-        }
-    }
     handleKeyPress = (e) =>{
         if(e.key === 'Enter'){
+            console.log('handleKeyPress')
             this.handleChange(e)
-            this.props.onKeyPress(e)
+            this.props.onKeyPress()
         }
     }
     handleChange = (e) => {
+        console.log('handleChange',e.target.value)
         this.value = e.target.value
         let message = ''
         if(this.props.required && this.value.trim() === '') {

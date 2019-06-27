@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Alert from "../alert";
 
 const Container = styled(({className,children}) => (
      <div className={className}>

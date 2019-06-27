@@ -9,6 +9,9 @@ class Input extends Component {
         }
         this.value = ''
     }
+    getValue = () => {
+        return this.value
+    }
     hasError = () => {
         if(this.state.message === null || this.state.message !== ''){
             return true

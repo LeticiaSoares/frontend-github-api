@@ -16,10 +16,11 @@ class SearchUser extends Component{
     }
     onGetRepos = () =>{
         if(this.state.user){
-            this.props.onGetRepos(this.state.user)
+            
         }
+        this.props.onGetRepos(this.state.user)
     }
-
+    
     setUser = (e) => {
         this.setState({user :  e.target.value, disabled : this.inputUser.current.hasError()})
     }
