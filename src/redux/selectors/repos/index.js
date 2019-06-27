@@ -8,7 +8,4 @@ export function getReposList(state){
     return repos;
 }
 
-export function getRepoSelected(state){
-    const { selected } = state.repos
-    return selected.repo
-}
+

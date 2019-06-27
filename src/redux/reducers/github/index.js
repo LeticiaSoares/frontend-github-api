@@ -1,4 +1,4 @@
-import { SUCCESS_USER_REPOS,SELECT_REPO } from '../../actions/github'
+import { SUCCESS_USER_REPOS,SELECT_REPO,FAIL_USER_REPOS } from '../../actions/github'
 
 const githubReducer = (
     state = {},
@@ -11,10 +11,12 @@ const githubReducer = (
             })
         case SELECT_REPO:
             return Object.assign({}, state, {
-               selected : {
-                   ...action.payload
-               }
+                selected : {
+                    ...action.payload
+                }
             })
+        case FAIL_USER_REPOS:
+            return []
         default:
             return state
     }

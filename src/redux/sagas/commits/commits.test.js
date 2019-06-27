@@ -2,7 +2,7 @@ import { put, call, takeLatest } from 'redux-saga/effects'
 import { cloneableGenerator } from '@redux-saga/testing-utils'
 import { githubActions } from '../../actions/github'
 import {getRepoCommits} from '../../../services/github.api'
-import {index,fetchCommits} from './index'
+import {fetchCommits} from './index'
 
 const expecteMock = { payload: {  user: 'LeticiaSoares'} }
 describe('commits.saga', () => {

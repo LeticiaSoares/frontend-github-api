@@ -1,14 +1,11 @@
 import React from 'react';
 import {connect} from "react-redux";
-import { Provider } from 'react-redux'
-import store from './redux'
 import {Route, Switch, withRouter} from 'react-router'
 import SearchUser from './pages/seachUser'
 import ListCommits from './pages/listCommits'
 import Alert from './components/alert'
 import { getAlertMessage } from './redux/selectors/alert'
 import { alertActions } from './redux/actions/alert'
-import { startMainSaga }  from './redux'
 
 class App extends React.Component{
     constructor(props){
@@ -17,9 +14,6 @@ class App extends React.Component{
             message : false,
         }
     }
-    // componentDidMount() {
-    //     startMainSaga()
-    // }
     static getDerivedStateFromProps (props, state) {
         if (props.message !== state.message) {
             return {

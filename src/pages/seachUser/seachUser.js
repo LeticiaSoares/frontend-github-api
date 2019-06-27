@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import { Link } from 'react-router-dom'
 import Title from "../../components/title/title";
 import Container from "../../components/container";
 import Label from "../../components/label";
@@ -10,7 +11,7 @@ import Loading from '../../components/loading'
 class SearchUser extends Component{
     constructor(props) {
         super(props)
-        this.state = { user : 'LeticiaSoares', isLoading : false}
+        this.state = { user : '', isLoading : false}
     }
     onGetRepos = () =>{
         this.props.onGetRepos(this.state.user)
@@ -29,7 +30,6 @@ class SearchUser extends Component{
     }
     render() {
         const { repos } = this.props
-        console.log('state',this.state)
         return (
             <Container>
                 <Title>Github</Title>
@@ -44,7 +44,7 @@ class SearchUser extends Component{
                                 {repos && repos.map((item)=>(
                                     <tr>
                                         <td>{item.name}</td>
-                                        <td><a href={`/${this.state.user}/${item.name}/commits`}>Commits</a></td>
+                                        <td><Link to={`/${this.state.user}/${item.name}/commits`}>Commits</Link></td>
                                     </tr>
                                 ))}
                             </Table>

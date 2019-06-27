@@ -15,15 +15,9 @@ export default createStore(
     )
 )
 
-export function * startMainSaga() {
-
-}
-
 export function startReposSaga(){
-    console.log('startReposSaga')
     sagaMiddleware.run(reposSaga)
 }
 export function startCommitSaga(){
-    console.log('startCommitSaga')
     sagaMiddleware.run(commmitsSaga)
 }
