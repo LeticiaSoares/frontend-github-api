@@ -1,7 +1,11 @@
 import react from 'react'
 import styled from 'styled-components'
 
-export default styled.h1`
-    color: #ad2525;
+const Title = styled.h1`
+    color: #FF5A49;
     font-we
 `
+
+Title.displayName = 'Title'
+
+export default Title

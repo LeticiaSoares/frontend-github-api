@@ -41,4 +41,6 @@ const Loading = styled(({className,...restProps})=>(
     }
 `
 
+Loading.displayName = 'Loading'
+
 export default Loading

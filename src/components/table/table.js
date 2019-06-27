@@ -17,20 +17,25 @@ const Table = styled(({className,columns, children}) => (
 ))`
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
     overflow-y: scroll;
     display: block;
     .table__titles {
-        color: #ad2525;
+        color: #FF5A49;
         font-weight: 700;
         background-color: #f2f2f2;
      }
      th, td {
+        width: 100%;
         text-align: left;
          padding: 8px;
      }
+     a {
+        color: #FF5A49;
+        font-weight: 700;
+     }
      tr:nth-child(even){background-color: #f2f2f2}
 `
+
+Table.displayName = 'Table'
 
 export default Table

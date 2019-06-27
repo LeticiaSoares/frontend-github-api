@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Alert from "../alert";
 
 const Container = styled(({className,children}) => (
      <div className={className}>
@@ -14,4 +15,7 @@ const Container = styled(({className,children}) => (
          padding: 2.25rem 30% 0;
     }
 `
+
+Container.displayName = 'Container'
+
 export default Container

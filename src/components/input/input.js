@@ -66,16 +66,19 @@ const InputStyled = styled(Input)`
     }
     .input:focus {
         outline: none;
-        border-color: #a02a2a;
-        box-shadow: 0 0 10px #a02a2a;
+        border-color: #FF5A49;
+        box-shadow: 0 0 10px #FF5A49;
     }
     .input__erro {
         font-family: monospace;
         font-weight: 700;
-        color: #ad2525;
+        color: #FF5A49;
     }
 
 `
+
+InputStyled.displayName ='Input'
+
 export default InputStyled
 
 

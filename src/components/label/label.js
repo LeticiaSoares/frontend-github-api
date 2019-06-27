@@ -1,5 +1,4 @@
 import React from 'react'
-import './label.css'
 
 function Label(props) {
     return (
@@ -8,5 +7,7 @@ function Label(props) {
         </label>
     )
 }
+
+Label.displayName = 'Label'
 
 export default Label
