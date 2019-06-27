@@ -3,12 +3,14 @@ import SearchUser from './seachUser'
 import {connect} from "react-redux";
 import {GET_USER_REPOS} from "../../redux/actions/github";
 import {getReposList, getUser} from "../../redux/selectors/repos";
+import {isLoading} from "../../redux/selectors/loading";
 import { startReposSaga } from '../../redux'
 
 const mapStateToProps = state => {
     return {
         repos: getReposList(state),
         user : getUser(state),
+        isLoading: isLoading(state)
     }
 }
 const mapDispatchToProps = dispatch => ({
