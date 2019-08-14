@@ -39,16 +39,16 @@ class SearchUser extends Component{
                 <Title>Github</Title>
                 <Label> Digite o usuário </Label>
                 <Input ref={this.inputUser}  type='text' onKeyPress={this.onGetRepos} onChange={this.setUser} onKeyDown  value={this.state.user} required />
-                <Button disabled={this.state.disabled} onClick={this.onGetRepos}>Pesquisar</Button>
+                <Button className='search-user' disabled={this.state.disabled} onClick={this.onGetRepos}>Pesquisar</Button>
                 {this.state.isLoading ? <Loading  width={'50px'}  /> :
                     repos &&
                         <React.Fragment>
                             <p>Total {repos && repos.length} </p>
-                            <Table columns={['Repositórios','']}>
+                            <Table className='list-commits' columns={['Repositórios','']}>
                                 {repos && repos.map((item)=>(
                                     <tr key={item.id}>
                                         <td>{item.name}</td>
-                                        <td><Link to={`/${this.state.user}/${item.name}/commits`}>Commits</Link></td>
+                                        <td><Link className={`link-commit-${item.name}`} to={`/${this.state.user}/${item.name}/commits`}>Commits</Link></td>
                                     </tr>
                                 ))}
                             </Table>

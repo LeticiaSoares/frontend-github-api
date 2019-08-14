@@ -27,6 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "cypress": "./node_modules/.bin/cypress open",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -52,6 +53,7 @@
     "@storybook/addons": "^5.1.8",
     "@storybook/react": "^5.1.8",
     "babel-loader": "^8.0.5",
+    "cypress": "^3.4.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jest": "^24.7.1"
