@@ -33,3 +33,8 @@ You can list the repositories of a user and see of commits of repositorie select
 -Jest - A delightful JavaScript Testing Framework with a focus on simplicity
 
 -Enzyme - A JavaScript Testing utility for React that makes it easier to test your React Components' output
+
+-Teste end to end with Cypress
+
+![](cypress-example.gif)
+
